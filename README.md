@@ -1,5 +1,5 @@
-# Apache_Parser
-Apache python parser
+# Apache Log Parser
+Apache log python parser
 
 # Missing
-Return aditional information
+Return one line of text output with aditional information
