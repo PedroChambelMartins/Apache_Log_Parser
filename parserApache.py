@@ -5,7 +5,8 @@
 # -R: Exits with WARNING or CRITICAL status if the number of log entries by the same source IP address is respectively above <Warn threshold> or <Critical threshold>
 # -n <minutes>: Exits with WARNING or CRITICAL status if the number of log lines in some consecutive <minutes> was respectively above <Warn threshold> or <Critical threshold>
 # If the command line does not satisfy the syntax, the file is not found or the warning or critical values don't make sense (i.e. warn is higher than critical), the UNKNOWN status should be returned.
-
+#
+# The exit status are in accordance with the Nagios Core Plugin API
 from optparse import OptionParser
 from datetime import datetime
 from datetime import timedelta
@@ -220,3 +221,4 @@ elif options.n != None:
     # exit(0)
 else:
     print("OK")
+    exit(0)
